@@ -33,5 +33,10 @@ namespace WpfApp1.NomeCompleto
         {
             output.Content = inputNome.Text + inputSobrenome.Text;
         }
+
+        private void inputSobrenome_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

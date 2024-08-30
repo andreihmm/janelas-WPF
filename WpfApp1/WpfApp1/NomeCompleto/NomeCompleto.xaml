@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.NomeCompleto"
         mc:Ignorable="d"
-        Title="NomeCompleto" Height="371" Width="535">
+        Title="NomeCompleto" Height="402" Width="588">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" Height="105" Margin="0,23,0,0" VerticalAlignment="Top" Width="459">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="103*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="105" Margin="18,23,0,0" VerticalAlignment="Top" Width="459" Grid.Column="1">
             <Label Content="Digite seu nome" Width="196" HorizontalAlignment="Center" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
-            <TextBox x:Name="inputNome" Height="22" TextWrapping="Wrap" Text="TextBox" Width="215" TextChanged="TextBox_TextChanged" TextAlignment="Center"/>
+            <TextBox x:Name="inputNome" Height="22" TextWrapping="Wrap" Text="" Width="215" TextChanged="TextBox_TextChanged" TextAlignment="Center"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" Height="105" Margin="0,147,0,0" VerticalAlignment="Top" Width="461">
+        <StackPanel HorizontalAlignment="Left" Height="105" Margin="17,147,0,0" VerticalAlignment="Top" Width="461" Grid.Column="1">
             <Label Content="Digite seu sobrenome" Height="29" Width="221" HorizontalContentAlignment="Center"/>
-            <TextBox x:Name="inputSobrenome" Height="26" TextWrapping="Wrap" Text="TextBox" Width="219"/>
+            <TextBox x:Name="inputSobrenome" Height="26" TextWrapping="Wrap" Text="" Width="219" TextAlignment="Center" TextChanged="inputSobrenome_TextChanged"/>
         </StackPanel>
-        <Label x:Name="output" Content="Label" HorizontalAlignment="Left" Height="40" Margin="150,262,0,0" VerticalAlignment="Top" Width="261" FontSize="20" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold"/>
-        <Button x:Name="botao" Content="JuntarNome" Margin="37,262,393,62" Click="botao_Click"/>
+        <Label x:Name="output" Content="Label" HorizontalAlignment="Left" Height="40" Margin="235,271,0,0" VerticalAlignment="Top" Width="261" FontSize="20" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Grid.Column="1"/>
+        <Button x:Name="botao" Content="JuntarNome" Margin="17,262,441,62" Click="botao_Click" Grid.Column="1"/>
 
 
     </Grid>
